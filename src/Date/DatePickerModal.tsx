@@ -57,7 +57,6 @@ export function DatePickerModal(
       default: 'slide',
     })
 
-  const isPageSheet = presentationStyle === 'pageSheet' && Platform.OS === 'ios'
 
   return (
     <View style={[StyleSheet.absoluteFill]} pointerEvents="box-none">
