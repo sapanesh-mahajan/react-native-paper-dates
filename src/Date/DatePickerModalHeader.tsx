@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Animated, StyleSheet } from 'react-native'
 import { Appbar, Button, useTheme } from 'react-native-paper'
 
-import { useHeaderTextColor } from '../utils'
+// import { useHeaderTextColor } from '../utils'
 import { getTranslation } from '../translations/utils'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 
@@ -19,8 +19,8 @@ export interface DatePickerModalHeaderProps {
 export default function DatePickerModalHeader(
   props: DatePickerModalHeaderProps
 ) {
-  const theme = useTheme()
-  const { locale, closeIcon = 'close' } = props
+  // const theme = useTheme()
+  const { locale } = props
   const saveLabel = props.saveLabel || getTranslation(locale, 'save')
   // const color = useHeaderTextColor()
   const insets = useSafeAreaInsets()
