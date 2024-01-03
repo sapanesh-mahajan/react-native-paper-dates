@@ -205,7 +205,7 @@ export function DatePickerModalContent(
             locale={locale}
             inputEnabled={props.inputEnabled}
           />
-        }ß
+        }
       />
        <DatePickerModalHeader
           locale={locale}
