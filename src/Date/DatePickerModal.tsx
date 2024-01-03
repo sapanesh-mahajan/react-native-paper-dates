@@ -94,8 +94,7 @@ export function DatePickerModal(
           >
             <DatePickerModalContent
               {...rest}
-              inputEnabled={inputEnabled}
-              statusBarOnTopOfBackdrop={isPageSheet || ''}
+              inputEnabled={inputEnabled} 
             />
           </View>
         </View>
