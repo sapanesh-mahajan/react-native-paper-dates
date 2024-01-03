@@ -95,7 +95,7 @@ export function DatePickerModal(
             <DatePickerModalContent
               {...rest}
               inputEnabled={inputEnabled}
-              disableSafeTop={false}
+              disableSafeTop={'}
               disableStatusBar={''}
               statusBarOnTopOfBackdrop={isPageSheet || ''}
             />
