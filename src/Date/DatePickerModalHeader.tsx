@@ -37,20 +37,23 @@ export default function DatePickerModalHeader(
         ]}
       >
         <Appbar style={styles.appbarHeader}>
-          <Appbar.Action
-            icon={closeIcon}
-            accessibilityLabel={getTranslation(locale, 'close')}
+           <Button
+            textColor={'#6C00D9'}
             onPress={props.onDismiss}
-            color={color}
-            testID="react-native-paper-dates-close"
-          />
-          <Appbar.Content title={''} />
+            disabled={props.saveLabelDisabled ?? false}
+            uppercase={props.uppercase ?? true}
+            testID="react-native-paper-dates-save"
+            style={{ marginRight: 16 }}
+          >
+            Cancel
+          </Button>
           <Button
-            textColor={theme.isV3 ? theme.colors.primary : color}
+            textColor={'#FFFFFF'}
             onPress={props.onSave}
             disabled={props.saveLabelDisabled ?? false}
             uppercase={props.uppercase ?? true}
             testID="react-native-paper-dates-save"
+            style={{ backgroundColor: '#6C00D9', marginRight: 16 }}
           >
             {saveLabel}
           </Button>
@@ -86,5 +89,7 @@ const styles = StyleSheet.create({
   appbarHeader: {
     elevation: 0,
     backgroundColor: 'transparent',
+    bottom: 30,
+    alignSelf: 'flex-end'
   },
 })
