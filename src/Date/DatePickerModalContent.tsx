@@ -16,7 +16,6 @@ import DatePickerModalContentHeader, {
   HeaderPickProps,
 } from './DatePickerModalContentHeader'
 import CalendarEdit from './CalendarEdit'
-import DatePickerModalHeaderBackground from './DatePickerModalHeaderBackground'
 import { useTheme } from 'react-native-paper'
 import DatePickerModalStatusBar from './DatePickerModalStatusBar'
 
@@ -36,9 +35,6 @@ interface DatePickerModalContentBaseProps {
   uppercase?: boolean
   inputEnabled?: boolean
 
-  disableSafeTop?: boolean
-  disableStatusBar?: boolean
-  statusBarOnTopOfBackdrop?: boolean
 }
 
 export interface DatePickerModalContentRangeProps
