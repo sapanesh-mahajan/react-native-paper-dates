@@ -6,6 +6,7 @@ import {
   useWindowDimensions,
   View,
   Platform,
+  Dimensions,
 } from 'react-native'
 import { useTheme } from 'react-native-paper'
 import DatePickerModalContent, {
@@ -25,15 +26,15 @@ interface DatePickerModalProps {
 
 export interface DatePickerModalSingleProps
   extends DatePickerModalContentSingleProps,
-    DatePickerModalProps {}
+  DatePickerModalProps { }
 
 export interface DatePickerModalMultiProps
   extends DatePickerModalContentMultiProps,
-    DatePickerModalProps {}
+  DatePickerModalProps { }
 
 export interface DatePickerModalRangeProps
   extends DatePickerModalContentRangeProps,
-    DatePickerModalProps {}
+  DatePickerModalProps { }
 
 export function DatePickerModal(
   props:
@@ -66,19 +67,21 @@ export function DatePickerModal(
     <View style={[StyleSheet.absoluteFill]} pointerEvents="box-none">
       <Modal
         animationType={animationTypeCalculated}
-        transparent={!isPageSheet}
+        transparent={true}
         visible={visible}
         onRequestClose={rest.onDismiss}
-        presentationStyle={isPageSheet ? 'pageSheet' : 'overFullScreen'}
-        supportedOrientations={supportedOrientations}
+        // presentationStyle={isPageSheet ? 'pageSheet' : 'overFullScreen'}
+        // supportedOrientations={supportedOrientations}
         statusBarTranslucent={true}
+      // style={{margin: 0,   justifyContent: 'center',
+      // alignItems: 'center',}}
       >
         <TouchableWithoutFeedback onPress={rest.onDismiss}>
           <View
             style={[
               StyleSheet.absoluteFill,
               styles.modalBackground,
-              { backgroundColor: theme.colors.backdrop },
+              { backgroundColor: theme.colors.backdrop, borderRadius: 28 },
             ]}
           />
         </TouchableWithoutFeedback>
@@ -90,7 +93,7 @@ export function DatePickerModal(
             style={[
               styles.modalContent,
               { backgroundColor: theme.colors.surface },
-              dimensions.width > 650 ? styles.modalContentBig : null,
+              // dimensions.width > 650 ? styles.modalContentBig : null,
             ]}
           >
             <DatePickerModalContent
@@ -119,14 +122,20 @@ const styles = StyleSheet.create({
   modalRoot: {
     justifyContent: 'center',
     alignItems: 'center',
-    flex: 1,
+    height: 560,
+    marginTop: '50%',
+    marginLeft: 20,
+    marginRight: 20,
+    borderRadius: 28,
   },
   modalBackground: {
-    flex: 1,
+    // flex: 1,
+
   },
   modalContent: {
     flex: 1,
     width: '100%',
+    borderRadius: 28
   },
   modalContentBig: {
     maxWidth: 600,
