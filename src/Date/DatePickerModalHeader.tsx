@@ -22,7 +22,7 @@ export default function DatePickerModalHeader(
   const theme = useTheme()
   const { locale, closeIcon = 'close' } = props
   const saveLabel = props.saveLabel || getTranslation(locale, 'save')
-  const color = useHeaderTextColor()
+  // const color = useHeaderTextColor()
   const insets = useSafeAreaInsets()
 
   return (
