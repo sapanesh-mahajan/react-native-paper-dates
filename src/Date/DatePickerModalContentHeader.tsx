@@ -110,8 +110,8 @@ export default function DatePickerModalContentHeader(
                 ? 'pencil-outline'
                 : 'pencil'
               : calendarIcon ?? theme.isV3
-              ? 'calendar-blank'
-              : 'calendar'
+                ? 'calendar-blank'
+                : 'calendar'
           }
           accessibilityLabel={
             collapsed
@@ -269,6 +269,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     paddingLeft: 24,
     paddingRight: 12,
+    marginTop: 20,
+    borderBottomWidth: 1,
+    borderColor: '#CBC4CF'
   },
   headerContentContainer: { marginTop: 5, flexDirection: 'row' },
   label: { color: '#fff', letterSpacing: 1, fontSize: 13 },
