@@ -17,7 +17,6 @@ import DatePickerModalContentHeader, {
 } from './DatePickerModalContentHeader'
 import CalendarEdit from './CalendarEdit'
 import { useTheme } from 'react-native-paper'
-import DatePickerModalStatusBar from './DatePickerModalStatusBar'
 
 export type LocalState = {
   startDate: CalendarDate
@@ -80,15 +79,12 @@ export function DatePickerModalContent(
     onChange,
     onConfirm,
     onDismiss,
-    disableSafeTop,
-    disableStatusBar,
     disableWeekDays,
     locale,
     validRange,
     dateMode,
     startYear,
     endYear,
-    statusBarOnTopOfBackdrop,
   } = props
   const anyProps = props as any
 
