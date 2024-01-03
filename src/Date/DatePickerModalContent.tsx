@@ -156,15 +156,6 @@ export function DatePickerModalContent(
           disableStatusBar={!!disableStatusBar}
           statusBarOnTopOfBackdrop={!!statusBarOnTopOfBackdrop}
         />
-        <DatePickerModalHeader
-          locale={locale}
-          onSave={onInnerConfirm}
-          onDismiss={onDismiss}
-          saveLabel={props.saveLabel}
-          saveLabelDisabled={props.saveLabelDisabled ?? false}
-          uppercase={props.uppercase ?? defaultUppercase}
-          closeIcon={props.closeIcon}
-        />
         <DatePickerModalContentHeader
           state={state}
           mode={mode}
@@ -214,8 +205,17 @@ export function DatePickerModalContent(
             locale={locale}
             inputEnabled={props.inputEnabled}
           />
-        }
+        }ß
       />
+       <DatePickerModalHeader
+          locale={locale}
+          onSave={onInnerConfirm}
+          onDismiss={onDismiss}
+          saveLabel={props.saveLabel}
+          saveLabelDisabled={props.saveLabelDisabled ?? false}
+          uppercase={props.uppercase ?? defaultUppercase}
+          closeIcon={props.closeIcon}
+        />
     </>
   )
 }
