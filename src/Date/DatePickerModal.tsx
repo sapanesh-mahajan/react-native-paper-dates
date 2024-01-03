@@ -6,7 +6,6 @@ import {
   useWindowDimensions,
   View,
   Platform,
-  Dimensions,
 } from 'react-native'
 import { useTheme } from 'react-native-paper'
 import DatePickerModalContent, {
@@ -43,7 +42,6 @@ export function DatePickerModal(
     | DatePickerModalMultiProps
 ) {
   const theme = useTheme()
-  const dimensions = useWindowDimensions()
   const {
     visible,
     animationType,
@@ -109,14 +107,6 @@ export function DatePickerModal(
     </View>
   )
 }
-
-const supportedOrientations: any = [
-  'portrait',
-  'portrait-upside-down',
-  'landscape',
-  'landscape-left',
-  'landscape-right',
-]
 
 const styles = StyleSheet.create({
   modalRoot: {
