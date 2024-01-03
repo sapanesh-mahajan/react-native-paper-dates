@@ -3,7 +3,6 @@ import {
   Modal,
   StyleSheet,
   TouchableWithoutFeedback,
-  useWindowDimensions,
   View,
   Platform,
 } from 'react-native'
@@ -49,7 +48,6 @@ export function DatePickerModal(
     disableStatusBarPadding,
     inputEnabled,
     presentationStyle,
-    statusBarOnTopOfBackdrop,
     ...rest
   } = props
   const animationTypeCalculated =
@@ -97,7 +95,7 @@ export function DatePickerModal(
             <DatePickerModalContent
               {...rest}
               inputEnabled={inputEnabled}
-              disableSafeTop={disableStatusBarPadding}
+{/*               disableSafeTop={disableStatusBarPadding} */}
               disableStatusBar={disableStatusBar}
               statusBarOnTopOfBackdrop={isPageSheet || statusBarOnTopOfBackdrop}
             />
